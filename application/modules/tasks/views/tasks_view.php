@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title><?php echo $title; ?></title>
-</head>
-<body>
+
      <h2>List Of The Tasks</h2>
 	<?php foreach($lists as $list): ?>
   
@@ -17,5 +11,3 @@
     <hr>
     <?php echo $method2 ; ?>
 	
-</body>
-</html>

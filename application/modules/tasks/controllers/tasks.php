@@ -16,13 +16,16 @@ class Tasks extends MX_Controller {
 		$this->load->model('tasks_model');
 		$data['lists'] = $this->tasks_model->getTasks('priority');
 
+        //method one for accessing another module
 		$this->load->module('nofun');
         $data['method1'] = $this->nofun->sayHello();
-
+        
+        //method two for accessing another module
         $data['method2'] = Modules::run('nofun/sayHello');
 
+        $data['module']  = 'tasks';
+        $data['content'] = 'tasks_view';        
 
-
-		$this->load->view('tasks_view', $data);
+		echo Modules::run('templates/admin', $data);
 	}
 }

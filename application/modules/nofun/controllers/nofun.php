@@ -3,9 +3,9 @@
 class Nofun extends MX_Controller {
 
 
-	public function index()
+	public function sayHello()
 	{
-		echo 'hello';
+		return 'hello';
 	}
 
 
